@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2025 The Android Open Source Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- FPS Overlay -->
+    <string-array name="game_bar_fps_method_entries">
+        <item>新 API（默认）</item>
+        <item>旧系统</item>
+    </string-array>
+    <string-array name="game_bar_fps_method_values">
+        <item>新</item>
+        <item>旧</item>
+    </string-array>
+
+    <!-- Update Interval -->
+    <string-array name="fps_overlay_update_interval_entries">
+        <item>每 500ms</item>
+        <item>每秒</item>
+        <item>每2秒</item>
+        <item>每5秒</item>
+    </string-array>
+    <string-array name="fps_overlay_update_interval_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>5000</item>
+    </string-array>
+
+    <!-- Position -->
+    <string-array name="fps_overlay_position_entries">
+        <item>左上角</item>
+        <item>顶端居中</item>
+        <item>右上角</item>
+        <item>左下角</item>
+        <item>底部居中</item>
+        <item>右下角</item>
+        <item>自定义可拖拽</item>
+    </string-array>
+    <string-array name="fps_overlay_position_values">
+        <item>左上角</item>
+        <item>顶端居中</item>
+        <item>右上角</item>
+        <item>左下角</item>
+        <item>底部居中</item>
+        <item>右下角</item>
+        <item>可拖拽</item>
+    </string-array>
+
+    <!-- Overlay color -->
+    <string-array name="fps_overlay_color_entries">
+        <item>白色</item>
+        <item>深红色</item>
+        <item>水果沙拉</item>
+        <item>皇家蓝</item>
+        <item>琥珀色</item>
+        <item>蓝绿色</item>
+        <item>电紫色</item>
+        <item>品红色</item>
+    </string-array>
+
+    <string-array name="fps_overlay_color_values">
+        <item>#FFFFFF</item>
+        <item>#DC143C</item>
+        <item>#4CAF50</item>
+        <item>#4169E1</item>
+        <item>#FFBF00</item>
+        <item>#008080</item>
+        <item>#8A2BE2</item>
+        <item>#FF1493</item>
+    </string-array>
+
+    <!-- Overlay format -->
+    <string-array name="game_bar_format_entries">
+        <item>满</item>
+        <item>极简</item>
+    </string-array>
+    <string-array name="game_bar_format_values">
+        <item>满载</item>
+        <item>极简</item>
+    </string-array>
+
+    <!-- Split Mode -->
+    <string-array name="game_bar_split_mode_entries">
+        <item>并排</item>
+        <item>堆叠</item>
+    </string-array>
+    <string-array name="game_bar_split_mode_values">
+        <item>并排</item>
+        <item>堆叠</item>
+    </string-array>
+
+    <!-- Long press timeouts -->
+    <string-array name="game_bar_longpress_entries">
+        <item>0.5 second</item>
+        <item>1 second</item>
+        <item>3 seconds</item>
+        <item>5 seconds</item>
+    </string-array>
+    <string-array name="game_bar_longpress_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+    
+    <!-- Turbo Charging Modes -->
+    <string-array name="turbo_modes_entries">
+        <item>33W</item>
+        <item>45W</item>
+        <item>60W</item>
+        <item>90W</item>
+    </string-array>
+    <string-array name="turbo_modes_values">
+        <item>3500000</item>
+        <item>4090000</item>
+        <item>6000000</item>
+        <item>9750000</item>
+    </string-array>
+
+</resources>

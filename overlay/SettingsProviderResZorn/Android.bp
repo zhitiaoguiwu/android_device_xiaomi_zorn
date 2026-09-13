@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SettingsProviderResZorn",
+    device_specific: true,
+}
