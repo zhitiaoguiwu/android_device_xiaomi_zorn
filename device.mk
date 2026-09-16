@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
 
 # Camera, fingerprint init, device settings, and zorn-only shims.
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
-$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_zorn)
 
 PRODUCT_PACKAGES += \
     libcameraflare_shim \
@@ -55,8 +54,10 @@ PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(DEVICE_PATH)/configs/linker.config.json
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/properties/odm_CN.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_CN.prop \
-    $(DEVICE_PATH)/configs/properties/odm_GL.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_GL.prop
+    $(DEVICE_PATH)/configs/properties/odm_CN.prop:$(TARGET_COPY_OUT_ODM)/etc/build_CN.prop \
+    $(DEVICE_PATH)/configs/properties/odm_GL.prop:$(TARGET_COPY_OUT_ODM)/etc/build_GL.prop \
+    $(DEVICE_PATH)/configs/properties/odm_CN.prop:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/odm/etc/build_CN.prop \
+    $(DEVICE_PATH)/configs/properties/odm_GL.prop:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/odm/etc/build_GL.prop
 
 # Device-specific overlays supplement the common Xiaomi overlays.
 PRODUCT_PACKAGES += \

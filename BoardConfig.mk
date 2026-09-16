@@ -33,10 +33,9 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(KERNEL_PATH)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.118-android14-11-ga3b9c44908dd-ab13320413)
 
 # zorn's super partition is larger than the common baseline.
-BOARD_DTBOIMG_PARTITION_SIZE := 25165824
+BOARD_DTBOIMG_PARTITION_SIZE := 20971520
 BOARD_SUPER_PARTITION_SIZE := 11811160064
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 11800674304
-WITHOUT_RESERVED_SIZE := true
 
 # Use ext4 for every logical partition. This overrides inherited settings.
 $(foreach p, $(BOARD_PARTITION_LIST), $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4))
@@ -50,8 +49,11 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/configs/properties/system.prop
 TARGET_SYSTEM_EXT_PROP := $(DEVICE_PATH)/configs/properties/system_ext.prop
 TARGET_VENDOR_PROP := $(DEVICE_PATH)/configs/properties/vendor.prop
 
-# zorn-only modules and policy extensions.
-TARGET_RECOVERY_DEVICE_MODULES := libinit_zorn
+# Security patch level from OS2.0.215.0.VOKCNXM.
+BOOT_SECURITY_PATCH := 2025-08-01
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+
+# zorn-only policy extensions.
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
