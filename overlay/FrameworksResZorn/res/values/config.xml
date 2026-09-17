@@ -10,6 +10,11 @@
     <bool name="config_screen_off_udfps_enabled">true</bool>
     <bool name="config_screen_off_udfps_default_on">true</bool>
 
+    <!-- UDFPS long-press wake sensor supplied by sensors.xiaomi.v2.  Without
+         this declaration AmbientDisplayConfiguration rejects screen-off UDFPS
+         before it checks the user setting. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
+
     <!-- Array of desired screen brightness in nits corresponding to the lux values
          in the config_autoBrightnessLevels array. The display brightness is defined as the measured
          brightness of an all-white image.

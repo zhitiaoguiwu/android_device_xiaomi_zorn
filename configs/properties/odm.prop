@@ -71,6 +71,7 @@ persist.vendor.dc_backlight.enable=false
 debug.sf.set_idle_timer_ms=110
 
 # Fingerprint
+ro.vendor.sensors.xiaomi.udfps=true
 persist.vendor.sys.fp.expolevel=0x88
 persist.vendor.fingerprint.type=udfps
 persist.vendor.fingerprint.sensor_location=721|2482|105
