@@ -6,6 +6,7 @@
 
 soong_namespace {
     imports: [
+        "device/xiaomi/sm8650-common",
         "hardware/xiaomi",
     ],
 }

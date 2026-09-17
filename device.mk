@@ -10,6 +10,12 @@ DEVICE_PATH := device/xiaomi/zorn
 # zorn's self-contained proprietary vendor tree.
 $(call inherit-product, device/xiaomi/zorn/common.mk)
 
+# Replace sm8650-common's basic device settings app with zorn's complete
+# implementation. The local module uses a distinct Soong name, so both
+# device directories can remain in PRODUCT_SOONG_NAMESPACES.
+PRODUCT_PACKAGES := $(filter-out XiaomiParts,$(PRODUCT_PACKAGES))
+PRODUCT_PACKAGES += XiaomiPartsZorn
+
 TARGET_HAS_UDFPS := true
 PRODUCT_BUILD_SUPER_PARTITION := true
 PRODUCT_SOONG_NAMESPACES += \
@@ -48,7 +54,8 @@ PRODUCT_PACKAGES += \
     qcrilNrDb_vendor \
     sensors.xiaomi.v2 \
     init.qcom.early_boot.sh \
-    init.fingerprint.rc
+    init.fingerprint.rc \
+    ueventd.zorn.userdebug.rc
 
 PRODUCT_VENDOR_LINKER_CONFIG_FRAGMENTS += \
     $(DEVICE_PATH)/configs/linker.config.json

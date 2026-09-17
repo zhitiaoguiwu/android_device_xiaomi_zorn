@@ -1,1 +1,4 @@
 /dev/xiaomi-fp u:object_r:vendor_fingerprint_device:s0
+
+# Touch sampling
+/sys/devices/platform/goodix_ts.0/switch_report_rate u:object_r:sysfs_htsr:s0

@@ -16,3 +16,10 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "ueventd.zorn.userdebug.rc",
+    filename: "ueventd.qcom.userdebug.rc",
+    src: "etc/ueventd.qcom.userdebug.rc",
+    vendor: true,
+}
