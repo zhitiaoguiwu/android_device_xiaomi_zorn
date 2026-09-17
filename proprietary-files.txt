@@ -3153,6 +3153,9 @@ vendor/etc/sla/slad.conf
 vendor/lib64/vendor.qti.sla.service@1.0-impl.so
 vendor/lib64/vendor.qti.sla.service@1.0.so
 
+# IFAA
+product/app/IFAAService/IFAAService.apk:product/app/IFAAServiceZorn/IFAAServiceZorn.apk|3b6fe8c8b9cbf08bef714be6329915077eeb62f2
+
 # Soter
 mi_ext/product/app/SoterService/SoterService.apk:product/app/SoterService/SoterService.apk
 vendor/bin/vendor.qti.hardware.soter-provision

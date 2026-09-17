@@ -1,0 +1,8 @@
+# Android 16 platform-signed apps, including Soter/IFAA, use the versioned
+# platform_app_36 domain rather than the legacy platform_app domain.
+allow platform_app_36 hal_aidlbgservice_service:service_manager find;
+allow platform_app_36 hal_mlipay_service:service_manager find;
+binder_call(platform_app_36, hal_mlipay_default)
+get_prop(platform_app_36, vendor_audio_prop)
+get_prop(platform_app_36, vendor_camera_sensor_prop)
+get_prop(platform_app_36, vendor_displayfeature_prop)
